@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.navbar {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 50px;
+    width: 100%;
+    transition: background-color 0.5s ease;
+
+    /* transition: width 10s ease; */
+}
+
+/* .navbar:hover {
+    transition: background-color color 0.5s ease;
+    background-color: transparent;
+    color: black;
+    .hamburger-menu .line{
+        background-color: gray;
+    }
+} */
+
+
+.navbar .nav-item{
+    display: none;
+}
+
+
+.navbar.open{
+    width: 250px;
+    min-height: 100vh;
+    background-color: black; 
+    color: white;
+}
+
+.hamburger-menu.open{
+    align-self: flex-end;
+    
+}
+.hamburger-menu{
+    margin: 10px;
+    cursor: pointer;
+}
+.navbar .nav-item.open{
+    display: flex;
+    height: 40px;
+    padding: 10px;
+    width: 100%;
+    border-top: 0.5px solid rgb(96, 93, 93);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.navbar .nav-item.open.signout {
+    border-bottom: 0.5px solid rgb(96, 93, 93);
+}
+
+.navbar .nav-item.open:hover{
+    background-color: rgb(79, 76, 76);
+    color: rgb(60, 60, 237);
+}
+
+/* hamburger desgin */
+.hamburger-menu .line{
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    background-color: white;
+}
+
+
+@media (min-width: 1000px){
+
+    .hamburger-menu{
+        display: none;
+    }
+
+    .navbar{
+        flex-direction: row;
+        width: 100vw;
+    }
+
+    .navbar.open{
+        width: 100vw;
+        min-height: 50px;
+        background-color: black; 
+        color: white;
+    }
+
+    .navbar .nav-item{
+        display: flex;
+        height: 50px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar .nav-item.open{
+        display: flex;
+        height: 50px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        color: white;
+    }
+
+
+    .navbar .nav-item.open:hover{
+        background-color: black;
+        color: white;
+    }
+    
+
+}
